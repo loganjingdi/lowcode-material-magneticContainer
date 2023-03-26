@@ -1,0 +1,22 @@
+@import '~react-grid-layout/css/styles.css';
+@import '~react-resizable/css/styles.css';
+
+.remove{
+    position: absolute;
+    right: 7px;
+    top: 1px;
+    cursor: pointer;
+    z-index: 999;
+    display: none;
+}
+.react-grid-item{
+    border: 1px, solid #ececec;
+    padding: 10px;
+}
+.react-grid-item:hover .remove{
+    display:inline-block;
+}
+
+.react-resizable-handle{
+    visibility: true;
+}
