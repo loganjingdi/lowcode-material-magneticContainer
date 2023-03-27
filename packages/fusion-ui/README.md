@@ -1,14 +1,14 @@
 # README
 
-此项目是有基于阿里的文章 https://developer.aliyun.com/article/883433
+此项目基于阿里的文章 https://developer.aliyun.com/article/883433
 
 实现的一个小demo，算是一个比较简单的东西，没有做很多优化。
 
-现在项目有的一点小问题：
+项目有的一点小问题：
 
 > 磁吸布局是在iframe中实现的，与纯的react-grid-layout相比，有点点卡
 
-不过看到最近阿里的项目中有G6项目的开源，把 `iframe` 去掉了，不仅惊叹，还能这么玩，后面再持续优化吧。
+不过看到最近阿里的项目中有G6项目的开源，把 `iframe` 去掉了，不禁惊叹，还能这么玩，后面再持续优化吧。
 
 ## 体验
 
