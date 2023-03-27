@@ -6,14 +6,13 @@ const ResponsiveReactGridLayout = WidthProvider(Responsive)
 
 export class RGLContainer extends React.Component {
     onGridLayoutChange(layout) {
-        this.props._leaf.setPropValue('layout', layout.filter((item) => item.i))
+        this.props._leaf?.setPropValue('layout', layout.filter((item) => item.i))
     }
 
     render() {
         let { layout, _leaf, children } = this.props
         let childNodes = [];
         
-        console.log("===jdliu RGL", this.props);
         this.props.children.forEach((child, index) => {
             let item = layout[index];
             childNodes.push(

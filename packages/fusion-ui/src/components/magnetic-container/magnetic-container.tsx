@@ -6,21 +6,20 @@ export class MagneticContainer extends React.Component {
     static nextX = -3;
 
     render() {
-        console.log("===jdliu", this.props, MagneticContainer.nextX % 12);
+        
         let { layout=[], children, _leaf } = this.props;
 
-        // 设置MagneticContainer为RGLContainer
-        _leaf.isRGLContainer = true;
+        // 设置MagneticContainer为RGLContainer, 预览态无_leaf
+        _leaf?.isRGLContainer = true;
 
-        // TODO: 临时方案，设置父元素page为RGLContainer
-        _leaf.parent.isRGLContainer = true;
+        // TODO: 临时方案，设置父元素为RGLContainer
+        _leaf?.parent?.isRGLContainer = true;
 
         if (layout.length < children.length) {
             let child = children[children.length - 1];
             layout.push({
                 i: child.key || 'placeholder',
                 x: MagneticContainer.nextX % 12,
-                // x: Infinity,
                 y: Infinity,
                 w: 3,
                 h: 3,
@@ -28,6 +27,7 @@ export class MagneticContainer extends React.Component {
             MagneticContainer.nextX += 3;
         } 
         
+        // 去掉 placeholder
         if (children[0].props.className == 'lc-container-placeholder') {
             children= [];
         }
